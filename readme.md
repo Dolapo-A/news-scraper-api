@@ -7,7 +7,7 @@ The News Scraper API is a Node.js application that scrapes articles from various
 ## Features
 
 - Scrapes articles from multiple news outlets.
-- Returns structured data in JSON, including article titles, links, and images.
+- Returns structured JSON data, including article titles, links, and images.
 - Supports CORS for cross-origin requests.
 - Handles errors gracefully with informative messages.
 
