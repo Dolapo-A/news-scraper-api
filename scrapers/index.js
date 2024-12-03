@@ -2,17 +2,11 @@ const axios = require("axios");
 const techcrunchScraper = require("./techcrunch");
 const techradarScraper = require("./techradar");
 const hackernewsScraper = require("./hackernews");
-const theVergeScraper = require("./theverge");
-const technewsworldScraper = require("./technewsworld");
-const geekwireScraper = require("./geekwire");
 
 const scrapers = {
-	"technewsworld.com": technewsworldScraper.scrapeTechNewsWorld,
 	"techcrunch.com": techcrunchScraper.scrapeTechCrunch,
 	"techradar.com": techradarScraper.scrapeTechRadar,
 	"news.ycombinator.com": hackernewsScraper.scrapeHackerNews,
-	"theverge.com": theVergeScraper.scrapeTheVerge,
-	"geekwire.com": geekwireScraper.scrapeGeekWire,
 };
 
 async function fetchWithAdvancedOptions(url) {
