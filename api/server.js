@@ -5,8 +5,12 @@ const { scrapeNews } = require("../scrapers");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+// CORS with restricted origin
+app.use(cors({
+  origin: 'http://10.236.198.79',  // Allow only this origin
+}));
 app.use(express.json());
+
 
 // New route to support news outlet selection
 app.get("/api/:outlet", async (req, res) => {
