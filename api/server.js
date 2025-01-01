@@ -5,10 +5,14 @@ const { scrapeNews } = require("../scrapers");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// CORS with restricted origin
-app.use(cors({
-  origin: 'http://10.236.198.79',  // Allow only this origin
-}));
+// Debug logging
+app.use((req, res, next) => {
+    console.log(`Incoming request: ${req.method} ${req.url}`);
+    next();
+});
+
+// CORS Middleware
+app.use(cors({ origin: '*' })); // Allow all origins
 app.use(express.json());
 
 
