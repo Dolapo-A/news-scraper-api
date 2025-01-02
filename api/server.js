@@ -25,8 +25,7 @@ app.get("/api/:outlet", async (req, res) => {
 		const outletUrls = {
 			techcrunch: "https://techcrunch.com/",
 			techradar: "https://www.techradar.com/news",
-			hackernews: "https://news.ycombinator.com/",
-			//
+			//hackernews: "https://news.ycombinator.com/",			//
 			// technewsworld: "https://www.technewsworld.com/section/technology",
 			// theverge: "https://www.theverge.com/",
 			// geekwire: "https://www.geekwire.com/",
